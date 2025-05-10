@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aboutme</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page" id="home">
+    <img src="https://files.catbox.moe/yojyat.jpg" alt="Logo" class="logo floating" />
+    <audio id="bg-music" src="https://files.catbox.moe/qddmmb.mp3"></audio>
+    <button onclick="toggleMusic()">Play Music</button>
+
+    <!-- Pemutar Musik -->
+    <div id="music-player" style="display:none; margin-top:10px; text-align:center;">
+      <p id="music-title"><strong>Judul Lagu:</strong> Galau Remix</p>
+      <p id="music-artist"><strong>Penyanyi:</strong> Gatau😹</p>
+      <input type="range" id="seek-bar" value="0" style="width:80%;" />
+      <p><span id="current-time">0:00</span> / <span id="duration">0:00</span></p>
+      <button onclick="stopMusic()">Stop</button>
+    </div>
+
+    <nav>
+      <button onclick="scrollToProduk()">Lihat Produk</button>
+    </nav>
+    <p id="typed-text"></p>
+    <script>
+  const text = "Halo! Kami adalah tim kreatif yang menyediakan berbagai produk unik dan keren untuk kebutuhan lo semua, murah dan aman tentunya jika ada pertanyyan atau keluhan silahkan chat admin kami,anda ragu? rekber atau mc saja.";
+  const typedText = document.getElementById("typed-text");
+  let index = 0;
+
+  function typeEffect() {
+    if (index < text.length) {
+      typedText.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, 60); // kecepatan ngetik, ubah 40 jadi lebih kecil kalau mau lebih cepet
+    }
+  }
+  
+  window.onload = typeEffect;
+</script>
+      <div style="display: flex; gap: 20px; justify-content: center; align-items: center; margin: 10px 0;">
+        <a href="https://t.me/GanzVil21" target="_blank">
+          <img src="https://files.catbox.moe/xltp58.jpg" alt="Telegram" class="icon floating" />
+        </a>
+        <a href="https://wa.me/628568511738" target="_blank">
+          <img src="https://files.catbox.moe/ju5m1g.jpg" alt="WhatsApp" class="icon floating" />
+        </a>
+      </div>
+      <p><strong>Bahasa Pemrograman yang Dikuasai:</strong></p>
+      <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+        <img src="https://files.catbox.moe/jiw6da.jpg" alt="JavaScript" class="icon floating" />
+        <img src="https://files.catbox.moe/zlyx85.jpg" alt="Css" class="icon floating" />
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="produk">
+    <h2>Produk Kami</h2>
+    <div class="produk-list">
+      <div class="produk">
+        <img src="https://files.catbox.moe/b7hun7.jpg" alt="Produk 1" class="floating" />
+        <p><strong>Panel Pterodytl</strong></p>
+        <p>Dengan Harga Mulai 2.000 Saja Kamu Punya Panel Pterodytl Yang Omline 24 Jam Dan Tentunya Aman Dong !!.</p>
+        <p>Harga: Rp 2.000</p>
+        <a href="https://t.me/GanzVil21" target="_blank"><button>Buy</button></a>
+      </div>
+      <div class="produk">
+        <img src="https://files.catbox.moe/zuwtnn.jpg" alt="Produk 2" class="floating" />
+        <p><strong>Ubot Telegram</strong></p>
+        <p>Ubot Telegram Itu Asisten Pribadi Kamu Bisa Bantu Apapun Dengan Fitur Yang Banyak!.</p>
+        <p>Harga: Rp 6.000</p>
+        <a href="https://t.me/GanzVil21" target="_blank"><button>Buy</button></a>
+      </div>
+      <div class="produk">
+        <img src="https://files.catbox.moe/v86b34.jpg" alt="Produk 3" class="floating" />
+        <p><strong>Reseller Panel</strong></p>
+        <p>Kamu Bisa Buat Panel Sepuas Nya Hanya Dengan 6.000 Saja /Bulan.</p>
+        <p>Harga: 6.000</p>
+        <a href="https://t.me/GanzVil21" target="_blank"><button>Buy</button></a>
+      </div>
+      <div class="produk">
+        <img src="https://files.catbox.moe/ck2gxy.jpg" alt="Produk 4" class="floating" />
+        <p><strong>Murid Bug</strong></p>
+        <p>Murid Bug Via Telegram,Untuk Bug In Musuh Kamu Di WhatsApp,Dijamin.Puas!.</p>
+        <p>Harga: Rp 20.000</p>
+        <a href="https://t.me/GanzVil21" target="_blank"><button>Buy</button></a>
+      </div>
+      
+      <div class="produk">
+  <img src="https://files.catbox.moe/esmbmt.jpg" alt="Admin Panel" class="floating" />
+  <p><strong>Admin Panel</strong></p>
+  <p>Role admin untuk bantu manage user dan orderan.</p>
+  <p>Harga: Rp 7.000</p>
+  <a href="https://t.me/GanzVil21" target="_blank"><button>Buy</button></a>
+</div>
+
+<div class="produk">
+  <img src="https://files.catbox.moe/ldtmag.jpg" alt="PT Panel" class="floating" />
+  <p><strong>PT Panel</strong></p>
+  <p>Panel Pterodactyl siap pakai dengan fitur lengkap dan stabil tentunya.</p>
+  <p>Harga: Rp 2.000</p>
+  <a href="https://t.me/GanzVil21" target="_blank"><button>Buy</button></a>
+</div>
+
+<div class="produk">
+  <img src="https://files.catbox.moe/tamve4.jpg" alt="Owner Panel" class="floating" />
+  <p><strong>Owner Panel</strong></p>
+  <p>Bisa Jualan Semua Yang Berkaitan Dengan Panel,Benefits Yang Amat Banyak Tentunya.</p>
+  <p>Harga: Rp 20.000</p>
+  <a href="https://t.me/GanzVil21" target="_blank"><button>Buy</button></a>
+</div>
+
+<div class="produk">
+  <img src="https://files.catbox.moe/vi78f4.jpg" alt="VPS" class="floating" />
+  <p><strong>VPS</strong></p>
+  <p>Dapetin server VPS dengan harga terjangkau dan uptime tinggi.</p>
+  <p>Harga: Mulai Rp 15.000</p>
+  <a href="https://t.me/GanzVil21" target="_blank"><button>Buy</button></a>
+</div>
+    <nav>
+      <button onclick="scrollToHome()">Kembali ke Atas</button>
+    </nav>
+  </div>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const musicPlayer = document.getElementById("music-player");
+    const seekBar = document.getElementById("seek-bar");
+    const currentTimeEl = document.getElementById("current-time");
+    const durationEl = document.getElementById("duration");
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        musicPlayer.style.display = "block";
+      } else {
+        music.pause();
+      }
+    }
+
+    function stopMusic() {
+      music.pause();
+      music.currentTime = 0;
+    }
+
+    music.addEventListener("loadedmetadata", () => {
+      seekBar.max = music.duration;
+      durationEl.textContent = formatTime(music.duration);
+    });
+
+    music.addEventListener("timeupdate", () => {
+      seekBar.value = music.currentTime;
+      currentTimeEl.textContent = formatTime(music.currentTime);
+    });
+
+    seekBar.addEventListener("input", () => {
+      music.currentTime = seekBar.value;
+    });
+
+    function formatTime(time) {
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.floor(time % 60).toString().padStart(2, "0");
+      return `${minutes}:${seconds}`;
+    }
+
+    function scrollToProduk() {
+      document.getElementById("produk").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function scrollToHome() {
+      document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
